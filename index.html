@@ -1,73 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anshika Yadav | Developer Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" /> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anshika Yadav Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <nav>
-    <div class="nav-left">Anshika Yadav</div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><button onclick="toggleMode()">🌓</button></li>
-    </ul>
-  </nav>
-
-  <header class="hero">
-    <div class="profile">
-  <div class="photo-frame">
-    <img src="anshikaphoto.jpg" alt="Anshika Yadav" />
-  </div>
-</div>
-    <div class="intro">
-      <h1 id="greeting"></h1>
-      <h2>I’m <span id="typed-name" class="typing"></span></h2>
-      <p>B.Tech CSE graduate from TIIPS, Greater Noida</p>
-      <!-- <p>✨ Front-End + Back-End Developer | MERN Stack</p> -->
+    <!-- Fullscreen Tagline Intro -->
+    <div id="tagline-intro" class="tagline-intro">
+        <div class="tagline-container">
+            <div class="tagline-mask">
+                <h1 class="tagline">BREAKING BINARIES</h1>
+            </div>
+            <div class="tagline-mask">
+                <h1 class="tagline">AND STEREOTYPES</h1>
+            </div>
+            <p class="subtagline">Full Stack Developer | MERN Specialist | JAVA</p>
+        </div>
+        <div class="loading-bar"></div>
     </div>
-  </header>
 
-  <section id="about" class="reveal">
-    <h2>About Me</h2>
-    <p>I’m a passionate full-stack developer with a love for clean UI and modern web technologies. I enjoy watching movies 🎬 and reading 📚 in my free time. Always ready to take on exciting tech challenges!</p>
-  </section>
+    <!-- Main Portfolio -->
+    <div id="portfolio" class="portfolio hidden">
+        <!-- Animated Background -->
+        <div class="animated-bg">
+            <div class="particles"></div>
+            <div class="glow-circle"></div>
+        </div>
 
-  <section id="skills" class="reveal">
-    <h2>Skills</h2>
-    <div class="skills">
-      <span>💻 Java</span>
-      <span>🌐 JavaScript</span>
-      <span>🎨 HTML/CSS</span>
-      <span>⚛️ ReactJS</span>
-      <span>🌍 NodeJS</span>
-      <span>📦 ExpressJS</span>
-      <span>🗄️ MongoDB</span>
-      <span>🧮 MySQL</span>
-      <span>🛠️ Git, GitHub</span>
-      <span>🧰 VS Code, Notepad++</span>
-      <span>🚀 Netlify</span>
+        <!-- Floating Navigation -->
+        <nav class="floating-nav">
+            <div class="nav-container">
+                <a href="#" class="logo" data-text="PORTFOLIO"> MY PORTFOLIO</a>
+                <div class="nav-links">
+                    <a href="#about" class="nav-link" data-text="ABOUT">ABOUT</a>
+                    <a href="#skills" class="nav-link" data-text="SKILLS">SKILLS</a>
+                    <a href="#experience" class="nav-link" data-text="EXPERIENCE">EXPERIENCE</a>
+                    <a href="#contact" class="nav-link" data-text="CONTACT">CONTACT</a>
+                </div>
+                <div class="menu-toggle">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line"><span class="text-mask">HELLO, I'M A</span></span>
+                        <span class="title-line"><span class="text-mask">MERN STACK</span></span>
+                        <span class="title-line"><span class="text-mask">DEVELOPER</span></span>
+                    </h1>
+                    <p class="hero-subtitle">Building performant, scalable web applications with cutting-edge technologies</p>
+                    <a href="#contact" class="magnetic-btn">
+                        <span class="btn-text">GET IN TOUCH</span>
+                        <span class="btn-hover"></span>
+                    </a>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-card">
+                        <div class="card-content">
+                            <div class="code-window">
+                                <div class="window-header">
+                                    <div class="window-dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="code-content">
+                                    <pre><code class="javascript">const developer = {
+    name: "Anshika Yadav",
+    skills: ["React", "Node.js", "MongoDB"],
+    motto: "Break binaries & stereotypes",
+    buildCoolStuff: function() {
+        return "Let's create something amazing!";
+    }
+};</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-glare"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>SCROLL</span>
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about">
+            <div class="section-header">
+                <h2 class="section-title" data-text="ABOUT">ABOUT</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="animated-text">Motivated and detail-oriented Computer Science graduate with a strong foundation in Java programming and hands-on experience in full-stack web development using the MERN stack (MongoDB, Express.js, React.js, Node.js).</p>
+                    <p class="animated-text">Proficient in building dynamic user interfaces, developing RESTful APIs, and managing databases. Eager to contribute to real-world projects, continuously learn new technologies, and grow as a software developer.</p>
+                    <p class="animated-text">Strong understanding of object-oriented programming, data structures, and version control systems.</p>
+                </div>
+                <div class="about-visual">
+                    <div class="visual-container">
+                        <div class="profile-circle">
+                            <div class="circle-mask">
+                                <img src="ANSHIKA PORTFOLIO.jpg" alt="Profile" class="profile-img">
+                            </div>
+                            <div class="circle-deco"></div>
+                            <div class="circle-deco"></div>
+                            <div class="circle-deco"></div>
+                        </div>
+                        <div class="tech-icons">
+                            <div class="icon" data-tooltip="React">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="icon" data-tooltip="Node.js">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <div class="icon" data-tooltip="MongoDB">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="icon" data-tooltip="JavaScript">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills">
+            <div class="section-header">
+                <h2 class="section-title" data-text="SKILLS">SKILLS</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3 class="category-title">Languages</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-skill="Java">
+                            <div class="skill-progress" style="--progress: 90%"></div>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-item" data-skill="JavaScript">
+                            <div class="skill-progress" style="--progress: 95%"></div>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item" data-skill="PHP">
+                            <div class="skill-progress" style="--progress: 80%"></div>
+                            <span>PHP</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="category-title">Frontend</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-skill="HTML5">
+                            <div class="skill-progress" style="--progress: 98%"></div>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item" data-skill="CSS3">
+                            <div class="skill-progress" style="--progress: 95%"></div>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item" data-skill="React.js">
+                            <div class="skill-progress" style="--progress: 90%"></div>
+                            <span>React.js</span>
+                        </div>
+                        <div class="skill-item" data-skill="Redux">
+                            <div class="skill-progress" style="--progress: 85%"></div>
+                            <span>Redux</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="category-title">Database</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-skill="MongoDB">
+                            <div class="skill-progress" style="--progress: 88%"></div>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="skill-item" data-skill="Mongoose">
+                            <div class="skill-progress" style="--progress: 85%"></div>
+                            <span>Mongoose</span>
+                        </div>
+                        <div class="skill-item" data-skill="MySQL">
+                            <div class="skill-progress" style="--progress: 82%"></div>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="category-title">Tools & Platforms</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-skill="Git">
+                            <div class="skill-progress" style="--progress: 90%"></div>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item" data-skill="GitHub">
+                            <div class="skill-progress" style="--progress: 92%"></div>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="skill-item" data-skill="Postman">
+                            <div class="skill-progress" style="--progress: 85%"></div>
+                            <span>Postman</span>
+                        </div>
+                        <div class="skill-item" data-skill="VS Code">
+                            <div class="skill-progress" style="--progress: 95%"></div>
+                            <span>VS Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section experience">
+            <div class="section-header">
+                <h2 class="section-title" data-text="EXPERIENCE">EXPERIENCE</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">April 2025 – July 2025</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Softech Control Solutions</h3>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Developed responsive and interactive web pages using HTML, CSS, and JavaScript.</li>
+                                <li>Collaborated on UI/UX design improvements for enhanced usability and visual consistency.</li>
+                                <li>Implemented JavaScript for form validation, DOM manipulation, and dynamic content.</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+            <div class="section-header">
+                <h2 class="section-title" data-text="CONTACT">CONTACT</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <p>anshikayadav3010@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>DELHI</h4>
+                            <p>Delhi , India</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/anshikayadav3010" class="social-link" data-tooltip="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/anshikayadav30/" class="social-link" data-tooltip="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/coded.cutieeee?igsh=MWN3djl3MTViN2Jzeg==" class="social-link" data-tooltip="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">PORTFOLIO</div>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-copy">
+                    &copy; 2025 All Rights Reserved. Designed with <i class="fas fa-heart"></i> 
+                </div>
+            </div>
+        </footer>
     </div>
-  </section>
 
-  <section id="contact" class="reveal">
-    <h2>Let's Connect</h2>
-    <div class="contact-icons">
-      <a href="mailto:anshikayadav3010@gmail.com" target="_blank">📧</a>
-      <a href="https://www.linkedin.com/in/anshikayadav30/" target="_blank">💼</a>
-      <a href="https://github.com/anshikayadav3010" target="_blank">💻</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2024 Anshika Yadav | Designed with ❤️</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <!--JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
